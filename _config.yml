@@ -1,0 +1,10 @@
+title: Working in the open examples
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: false
+  include:
+    - *.md
+  exclude:
+    - README.md

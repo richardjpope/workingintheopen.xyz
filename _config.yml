@@ -5,6 +5,6 @@ relative_links:
   enabled: true
   collections: false
   include:
-    - *.md
+    - index.md
   exclude:
     - README.md

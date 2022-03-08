@@ -1,12 +1,11 @@
-# Examples of working in the open
+# Working in the open examples
 
 ## Public show and tells
 
-* https://www.youtube.com/watch?v=RZDXMIyGH_Y
-https://www.youtube.com/watch?v=6szHcia-cdY
-* https://111online.github.io/nhs111-resources/111online/show-and-tells/
-* https://www.eventbrite.co.uk/e/show-and-tell-blaenau-gwent-service-redesign-and-digital-journey-tickets-243513163427
-
+* [https://www.youtube.com/watch?v=RZDXMIyGH_Y](https://www.youtube.com/watch?v=RZDXMIyGH_Y)
+* [https://www.youtube.com/watch?v=6szHcia-cdY](https://www.youtube.com/watch?v=6szHcia-cdY)
+  * [https://111online.github.io/nhs111-resources/111online/show-and-tells/](https://111online.github.io/nhs111-resources/111online/show-and-tells/)
+* [https://www.eventbrite.co.uk/e/show-and-tell-blaenau-gwent-service-redesign-and-digital-journey-tickets-243513163427](https://www.eventbrite.co.uk/e/show-and-tell-blaenau-gwent-service-redesign-and-digital-journey-tickets-243513163427)
 
 
 ## Project/service/team website

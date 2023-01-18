@@ -1,0 +1,18 @@
+{
+  "name": "foundation-sites-template",
+  "version": "1.0.0",
+  "description": "Basic template for a new Foundation for Sites project.",
+  "author": "ZURB <foundation@zurb.com>",
+  "license": "MIT",
+  "dependencies": {
+    "foundation-sites": "^6.6.0",
+    "jquery": ">=3.0.0",
+    "motion-ui": "~2.0.0",
+    "what-input": "^5.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zurb/foundation-sites-template.git"
+  },
+  "private": true
+}

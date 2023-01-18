@@ -1,0 +1,71 @@
+{% include header.html %}
+  <div class="grid-x grid-padding-x">
+    <div class="medium-10 large-8 cell large-offset-2 medium-offset-1">
+      {% if page.title %}
+        <div class="post-header">
+          <h1><span>{{page.title}}</span></h1>
+          {% if page.intro %}
+            <p class="lead">
+              <span>{{page.intro}}</span>
+            </p>
+          {% endif %}
+                
+          {% if page.medium %}
+            <p class="meta">This article was also published on <a href="{{page.medium}}" rel="alternate">Medium</a>.</p>
+          {% endif %}
+        </div>
+      {% endif %}
+      
+      {{content}}
+
+
+    </div>
+  </div>
+
+    {% assign items_raw = site.essays | where: 'type', page.type %}
+    {% assign items = items_raw | sort: 'order' %}
+
+    {% if items.size > 1 %}
+      {% for item in items %}
+        {% if item.title == page.title %}
+          {% assign item_index = forloop.index %}
+        {% endif %}
+      {% endfor %}
+      {% assign next_index = item_index | plus: 1 %}
+      {% assign prev_index = item_index | minus: 1 %}
+      {% for item in items %}
+        {% if forloop.index == prev_index %}
+          {% assign prev = item %}
+        {% endif %}
+        {% if forloop.index == next_index %}
+          {% assign next = item %}
+        {% endif %}
+      {% endfor %}
+
+      <nav class="pagenav" role="navigation" aria-label="Pagination">
+        <ul class="no-bullet grid-x">
+          {% if prev %}
+            <li class="previous small-6 large-4 large-offset-2 cell">
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+              </svg>
+              <a href="{{ prev.url }}" title="{{ prev.title }}">
+                {{ prev.title }}
+              </a>
+            </li>
+          {% endif %}
+          {% if next %}
+            <li  class="next  small-6 large-5 cell {% if prev %}{% else %} large-offset-5 small-offset-6{% endif %}">
+              <a href="{{ next.url }}" title="{{ next.title }}">
+                {{ next.title }}
+              </a>
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+              </svg>
+            </li>
+          {% endif %}
+        </ul>
+      </nav>
+    {% endif %}
+    
+{% include footer.html %}
